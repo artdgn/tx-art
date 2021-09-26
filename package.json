@@ -1,0 +1,24 @@
+{
+  "name": "tx-art",
+  "version": "0.1.0",
+  "description": "Extension that generages a beautiful and unique art piece in the style of famous NFT collections and adds it into the transaction info page on Etherscan.",
+  "scripts": {
+    "prebuild": "rm -rf dist .cache",
+    "start": "NODE_ENV=development parcel watch src/background.js src/popup.html src/content-script.js --no-hmr",
+    "build": "NODE_ENV=production parcel build src/background.js src/popup.html src/content-script.js && cd dist && zip -9 -rFS ../tx-art.zip * && cd -",
+    "zip-source": "git clone -l . ./temp && rm -rf ./temp/.git && cd ./temp && zip -9 -rFS ../tx-art.zip * && cd - && rm -rf ./temp/"
+  },
+  "keywords": [],
+  "author": "artdgn",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-static-files-copy": "^2.6.0"
+  },
+  "dependencies": {
+    "p5": "^1.4.0"
+  },
+  "browserslist": [
+    ""
+  ]
+}
