@@ -1,9 +1,5 @@
-import "p5";
-
-export function fidenzaDraw() {
+export function fidenzaDraw(sketch) {
   let tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };
-  
-  let canvas;
 
   // reformatted with prettier
   const eps = Math.pow(2, -32),
@@ -127,16 +123,15 @@ export function fidenzaDraw() {
     V6 = 6,
     V7 = 7;
   function setup() {
-    windowHeight >= 1.2 * windowWidth
-      ? ((ww = windowWidth), (wh = 1.2 * windowWidth))
-      : ((wh = windowHeight), (ww = windowHeight / 1.2)),
+    sketch.windowHeight >= 1.2 * sketch.windowWidth
+      ? ((ww = sketch.windowWidth), (wh = 1.2 * sketch.windowWidth))
+      : ((wh = sketch.windowHeight), (ww = sketch.windowHeight / 1.2)),
       (wr = ww / dw),
-      (c = createCanvas(ww, wh)),
-      (canvas = c),
-      colorMode(HSB, 360, 100, 100, 100),
+      (c = sketch.createCanvas(ww, wh)),
+      sketch.colorMode(sketch.HSB, 360, 100, 100, 100),
       set_seed(tokenData.hash),
-      randomSeed(0),
-      noiseSeed(0),
+      sketch.randomSeed(0),
+      sketch.noiseSeed(0),
       (LX = -500),
       (RX = 2500),
       (TY = -0.25 * dh),
@@ -160,10 +155,10 @@ export function fidenzaDraw() {
     return void 0 === a ? dh : dh * a;
   }
   function vrtx(a, b) {
-    vertex(a * wr, b * wr);
+    sketch.vertex(a * wr, b * wr);
   }
   function swght(a) {
-    strokeWeight(a * wr);
+    sketch.strokeWeight(a * wr);
   }
   function pi(a) {
     return Math.PI * a;
@@ -183,7 +178,7 @@ export function fidenzaDraw() {
       const h = LX + spc * g;
       for (let i = 0; i < a[0].length; i++) {
         const j = TY + spc * i,
-          k = dist(b, c, h, j);
+          k = sketch.dist(b, c, h, j);
         if (k < e) {
           const b = rscl(k, 0, e, f, 0);
           a[g][i] += b;
@@ -198,22 +193,23 @@ export function fidenzaDraw() {
       const f = LX + spc * h;
       for (let i = 0; i < a[0].length; i++) {
         const j = TY + spc * i,
-          k = dist(b, c, f, j),
+          k = sketch.dist(b, c, f, j),
           l = e ? pi(0.025) : pi(-0.025),
-          m = l * sqrt(k / g);
+          m = l * sketch.sqrt(k / g);
         a[h][i] += m;
       }
     }
   }
   function flwP(a, b, c) {
     const e = [];
+    let d;
     for (let f = LX; f < RX; f += spc) {
       const b = [];
       for (let e, g = TY; g < BY; g += spc)
         (e = a),
           c &&
             ((e = angle(f, g, w(0.5), h(0.4)) - pi(0.5)),
-            (d = dist(f, g, w(0.5), h(0.5))),
+            (d = sketch.dist(f, g, w(0.5), h(0.5))),
             (e += rscl(d, 0, w(1.5), 0, pi(1)))),
           b.push(e);
       e.push(b);
@@ -259,18 +255,18 @@ export function fidenzaDraw() {
         let j = e;
         0 <= c && c < h && 0 <= b && b < g && (j = a[b][c]),
           f && (j = snp(j, pi(0.2))),
-          (n += i * cos(j)),
-          (o += i * sin(j));
+          (n += i * sketch.cos(j)),
+          (o += i * sketch.sin(j));
       }
       j.push(l);
     }
     return j;
   }
   function offset(a, b, c, e) {
-    return [a + e * cos(c), b + e * sin(c)];
+    return [a + e * sketch.cos(c), b + e * sketch.sin(c)];
   }
   function angle(b, c, e, f) {
-    const g = atan2(f - c, e - b);
+    const g = sketch.atan2(f - c, e - b);
     return 0 > g ? g + pi(2) : g;
   }
   function pAng(a, b) {
@@ -325,14 +321,14 @@ export function fidenzaDraw() {
     return i;
   }
   function cllsn(a, b, c, e, f, g) {
-    if (g && dist(a, b, w(0.5), h(0.4)) <= 1.3 * c) return !0;
+    if (g && sketch.dist(a, b, w(0.5), h(0.4)) <= 1.3 * c) return !0;
     const j = sctrs(a, b, c);
     for (let h = 0; h < j.length; h++) {
       let [g, i] = j[h];
       const k = e[g][i];
       for (const g of k) {
         const [e, h, i, j] = g;
-        if (dist(a, b, e, h) <= c + i && f !== j) return !0;
+        if (sketch.dist(a, b, e, h) <= c + i && f !== j) return !0;
       }
     }
     return !1;
@@ -351,11 +347,11 @@ export function fidenzaDraw() {
     "low" === i ? (r = w(0.02)) : "highAF" == i && (r = w(0.007));
     let s = [];
     for (let k = 0; k < b.length; k++) {
-      y = b[k];
+      let y = b[k];
       for (let a = w(-0.2); a < w(1.2); a += r) {
         const b = gssn(a, w(0.005)),
           c = gssn(y, q);
-        (!j || dist(b, c, w(0.5), h(0.4)) > w(0.07)) && s.push([b, c]);
+        (!j || sketch.dist(b, c, w(0.5), h(0.4)) > w(0.07)) && s.push([b, c]);
       }
     }
     s = shffl(s);
@@ -438,7 +434,7 @@ export function fidenzaDraw() {
     for (let c = 0; c < a.length - 1; c++) {
       const [e, f] = a[c],
         [g, h] = a[c + 1];
-      b += dist(e, f, g, h);
+      b += sketch.dist(e, f, g, h);
     }
     return b;
   }
@@ -457,7 +453,7 @@ export function fidenzaDraw() {
     for (let e = 1; e < a.length; e++) {
       const [b, c] = a[e - 1],
         [f, i] = a[e],
-        j = dist(b, c, f, i),
+        j = sketch.dist(b, c, f, i),
         k = h + j;
       if (k > g) {
         const a = g - h,
@@ -481,32 +477,32 @@ export function fidenzaDraw() {
     return a[a.length - 2];
   }
   function strokeSegment(a, b, c, e) {
-    stroke(a[0], a[1], a[2]), noFill(), swght(w(0.001));
+    sketch.stroke(a[0], a[1], a[2]), sketch.noFill(), swght(w(0.001));
     const f = b / w(4e-4),
       g = rng(0, 1e4);
     for (let h, i = 0; i < f; i += 1) {
-      (h = i / f), beginShape();
+      (h = i / f), sketch.beginShape();
       let a = 0.013 * (1 - c / w(1)),
         b = gssn(2 * a, a),
         j = gssn(1 - 2 * a, a);
       for (let a = b; a < j; a += 0.01) {
-        let b = noise(4 * (a * (c / w(0.25))) + g, 1.5 * h),
+        let b = sketch.noise(4 * (a * (c / w(0.25))) + g, 1.5 * h),
           f = h + 0.15 * (0.5 - b);
         const [i, j] = e(a, f);
         vrtx(i, j);
       }
-      endShape();
+      sketch.endShape();
     }
   }
   function fSeg(a, b, c, e, f, g, h, i) {
-    fill(a[0], a[1], a[2]),
+    sketch.fill(a[0], a[1], a[2]),
       b
-        ? (stroke(0, 0, 10), swght(w(0.001)))
-        : (stroke(a[0], a[1], a[2]), swght(w(5e-4)));
+        ? (sketch.stroke(0, 0, 10), swght(w(0.001)))
+        : (sketch.stroke(a[0], a[1], a[2]), swght(w(5e-4)));
     const j = [],
       k = [];
     for (let l = f; l < g; l += 0.01) j.push(l), k.unshift(l);
-    j.push(g), beginShape();
+    j.push(g), sketch.beginShape();
     for (const k of j) {
       const [a, b] = lerpCrv(c, k, h);
       vrtx(a, b);
@@ -516,7 +512,7 @@ export function fidenzaDraw() {
       const [a, b] = lerpCrv(e, k, i);
       vrtx(a, b);
     }
-    endShape(CLOSE);
+    sketch.endShape(sketch.CLOSE);
   }
   function pm1() {
     return z1;
@@ -1016,7 +1012,7 @@ export function fidenzaDraw() {
       return g;
     };
   function draw() {
-    noLoop(), background(40, 10, 90);
+    sketch.noLoop(), sketch.background(40, 10, 90);
     let a = wc([
         V1,
         0.03,
@@ -1129,7 +1125,7 @@ export function fidenzaDraw() {
         ? wc(["high", 0.6, "med", 0.35, "low", 0.05])
         : wc(["med", 0.7, "high", 0.2, "low", 0.1]);
     const j = f(a);
-    background(j[0], j[1], j[2]);
+    sketch.background(j[0], j[1], j[2]);
     let k = null;
     a === V1
       ? (k = pm1)
@@ -1200,10 +1196,10 @@ export function fidenzaDraw() {
     for (const b of x) {
       const d = b.margin;
       if (2 <= b.points.length) {
-        noStroke();
+        sketch.noStroke();
         const f = pMnCl(e, j, d, t);
-        fill(f[0], f[1], f[2]),
-          t ? (stroke(0, 0, 15), swght(w(0.001))) : noStroke();
+        sketch.fill(f[0], f[1], f[2]),
+          t ? (sketch.stroke(0, 0, 15), swght(w(0.001))) : sketch.noStroke();
         let c = z4;
         d === z0
           ? (c = w(7e-4))
@@ -1232,9 +1228,9 @@ export function fidenzaDraw() {
             return [lrp(c, e, b), lrp(d, f, b)];
           });
         else {
-          beginShape();
+          sketch.beginShape();
           for (const a of k) vrtx(a[0], a[1]);
-          endShape(CLOSE);
+          sketch.endShape(sketch.CLOSE);
           for (const b of [!0, !1]) {
             let d = pSL(a);
             q && (d = 2 * c);
@@ -1263,5 +1259,7 @@ export function fidenzaDraw() {
       }
     }
   }
-  return canvas;
+
+  sketch.setup = setup;
+  sketch.draw = draw;
 }

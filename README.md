@@ -1,11 +1,11 @@
 # Tx-Art:
-Generages a beautiful and unique art piece in the style of famous NFT collections and adds it into the transaction info page on Etherscan.
+*"Every transaction: a painting."*
 
-![]()
+![](https://artdgn.github.io/images/fidenzas-demo.gif)
 
 ## How?
-- The hash of the transaction being viewed is used as input to a generative art `p5` algorithm, and the piece is added to the page.
-- The piece generaged is NOT an NFT, and is not part of any collection. It's just one of an infinite* amount of pieces that can be generated from that algorithm.
+- The hash of the transaction being viewed is used as input to a generative art `p5.js` algorithm of choice, and the piece is added to the page.
+- The piece generaged is NOT an NFT, and is not part of any collection. It's just one of an infinite* amount of pieces that can be generated from the selected algorithm.
 
 > \* - not mathematically infinite, just very large in practical terms.
 

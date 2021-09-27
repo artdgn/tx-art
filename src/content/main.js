@@ -1,26 +1,26 @@
+import p5 from 'p5';
 import { fidenzaDraw } from './fidenza.js'
 
-
-
 function main() {
-  let canvas;
+  // create the div for the sketch
+  const contentDiv = document.getElementById('content');
+  const sketchDiv = document.createElement('div');
+  sketchDiv.id = "p5sketch";
+  sketchDiv.style.textAlign = 'center';
+  contentDiv.insertBefore(sketchDiv, contentDiv.children[0])
 
+  // draw the sketch
   chrome.storage.local.get(
     { storedSettings: {} },
     (stored) => {
       if (stored.storedSettings.enabled) {
         if (stored.storedSettings.style == "fidenza") {
-          canvas = fidenzaDraw();
+          // docs for global vs instance drawing: https://github.com/processing/p5.js/wiki/Global-and-instance-mode
+          const sketch = new p5(fidenzaDraw, 'p5sketch');
         }
-        console.log(canvas);
       }
     });
-  
-  // just the main container of the page
-  const mainDiv = document.getElementById('content');
-  // if we'd have the canvas (and if if it were drawn) - this might work
-  // mainDiv.insertBefore(canvas, mainDiv.children[0])
-
+    
   // watch for option changes
   chrome.storage.onChanged.addListener((changes) => {
     if ('storedSettings' in changes) {

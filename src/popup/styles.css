@@ -56,7 +56,7 @@ body {
 }
 .with-border{
   border: 0.1rem solid #c3c4c2;
-  padding: 0.5rem;
+  padding: 0.2rem;
   border-radius: 0.5rem; 
   margin-top: 0.3rem;
 }
@@ -72,7 +72,7 @@ body {
   color: #c3c4c2;
 }
 input[type='checkbox'] {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 select {
   width: 65%;

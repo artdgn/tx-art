@@ -1,7 +1,7 @@
 {
   "name": "tx-art",
   "version": "0.1.0",
-  "description": "Extension that generages a beautiful and unique art piece in the style of famous NFT collections and adds it into the transaction info page on Etherscan.",
+  "description": "Extension that generates a pretty and unique art piece for the transaction info page on Etherscan.",
   "scripts": {
     "prebuild": "rm -rf dist .cache",
     "start": "NODE_ENV=development parcel watch src/popup.html src/content-script.js --no-hmr",
