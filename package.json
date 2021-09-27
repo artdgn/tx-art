@@ -4,8 +4,8 @@
   "description": "Extension that generages a beautiful and unique art piece in the style of famous NFT collections and adds it into the transaction info page on Etherscan.",
   "scripts": {
     "prebuild": "rm -rf dist .cache",
-    "start": "NODE_ENV=development parcel watch src/background.js src/popup.html src/content-script.js --no-hmr",
-    "build": "NODE_ENV=production parcel build src/background.js src/popup.html src/content-script.js && cd dist && zip -9 -rFS ../tx-art.zip * && cd -",
+    "start": "NODE_ENV=development parcel watch src/popup.html src/content-script.js --no-hmr",
+    "build": "NODE_ENV=production parcel build src/popup.html src/content-script.js && cd dist && zip -9 -rFS ../tx-art.zip * && cd -",
     "zip-source": "git clone -l . ./temp && rm -rf ./temp/.git && cd ./temp && zip -9 -rFS ../tx-art.zip * && cd - && rm -rf ./temp/"
   },
   "keywords": [],

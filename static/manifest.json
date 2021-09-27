@@ -4,25 +4,21 @@
   "version": "0.1.9",
   "description": "Generages a beautiful and unique art piece in the style of famous NFT collections and adds it into the transaction info page on Etherscan.",
   "browser_action": {
-    "default_icon": "images/icon.png",
     "default_title": "Tx-Art",
     "default_popup": "popup.html"
   },
-  "icons": {"128": "images/icon.png" },
-  "permissions": [],
+  "icons": {},
+  "permissions": ["storage"],
   "content_scripts": [
     {
       "matches": [
-        "*://*.etherscan.org/tx/*"
+        "*://*.etherscan.io/tx/*"
       ],
       "js": ["content-script.js"],
       "run_at": "document_idle",
       "all_frames": false
     }
   ],
-  "background": {
-    "scripts": ["background.js"]
-  },
   "content_security_policy": "script-src 'self'; object-src 'self'",
   "browser_specific_settings": {
     "gecko": {

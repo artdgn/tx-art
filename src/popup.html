@@ -1,0 +1,50 @@
+<!--
+Allows user to adjust filtration settings.
+ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Options</title>
+  <link rel="stylesheet" href="./popup/styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div id="options">
+      <div id="help">
+        <div id="help-button">?</div>
+        <div class="with-border" id="help-text">Hover the mouse over any control area for a short tool-tip explanation.</div>
+      </div>
+      <div id="title">
+        <span title="Every transaction a painting"
+          >Tx-Art&nbsp</span>
+        <a href="https://github.com/artdgn/tx-art/issues" target="_blank" 
+          title="Please open a github issue for any complaints / suggestions.">
+          <img src="../static/images/github.png" id="github">
+        </a>
+      </div>
+      <div class="option-row">       
+        <label for="selected-enabled-check" 
+          class="with-border" title="Turn on / off">
+          <input class="stored-options" type="checkbox" id="selected-enabled-check" checked="true"/>
+          On&nbsp
+        </label>        
+      </div>
+      <hr class="dotted divider">
+
+      <div class="with-border" title="Choose art style">
+        <div class="option-row">
+          <span>Style</span>  
+          <select id="selected-style" class="stored-options" value="fidenza">
+            <option value="fidenza">Fidenza</option>
+          </select>  
+        </div>
+
+    </div>
+
+  </div>
+  <script src="./popup/popup.js"></script>
+</body>
+
+</html>
