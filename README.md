@@ -1,7 +1,7 @@
 # Tx-Art:
 *"Every transaction: a painting."*
 
-![](https://artdgn.github.io/images/fidenzas-demo.gif)
+![](https://github.com/artdgn/artdgn.github.io/raw/master/images/fidenzas-demo.gif)
 
 ## How?
 - The hash of the transaction being viewed is used as input to a generative art `p5.js` algorithm of choice, and the piece is added to the page.
