@@ -1,3 +1,5 @@
+const maxSize = 300;
+
 export function squiggleDraw(sketch) {
   // grab hash
   let tokenData = { "hashes": [(window.location.href.match(/0x.{64}/) || [''])[0]] }
@@ -35,8 +37,8 @@ export function squiggleDraw(sketch) {
 
   let spread;
   sketch.setup = function () {
-    const windowWidth = sketch.windowWidth;
-    const windowHeight = sketch.windowHeight;
+    const windowWidth = Math.min(maxSize, sketch.windowWidth);
+    const windowHeight = Math.min(maxSize, sketch.windowHeight);
     let portrait = windowWidth < windowHeight;
     sketch.createCanvas(windowWidth > windowHeight * 3 / 2 ? windowHeight * 3 / 2 : windowWidth, windowWidth > windowHeight * 3 / 2 ? windowHeight : windowWidth * 2 / 3);
     var el = document.getElementsByTagName("canvas")[0];

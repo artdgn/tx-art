@@ -1,3 +1,5 @@
+const maxSize = 600;
+
 export function fidenzaDraw(sketch) {
   let tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };
 
@@ -123,9 +125,11 @@ export function fidenzaDraw(sketch) {
     V6 = 6,
     V7 = 7;
   function setup() {
-    sketch.windowHeight >= 1.2 * sketch.windowWidth
-      ? ((ww = sketch.windowWidth), (wh = 1.2 * sketch.windowWidth))
-      : ((wh = sketch.windowHeight), (ww = sketch.windowHeight / 1.2)),
+    const windowHeight = Math.min(maxSize, sketch.windowHeight);
+    const windowWidth = Math.min(maxSize, sketch.windowWidth);
+    windowHeight >= 1.2 * windowWidth
+      ? ((ww = windowWidth), (wh = 1.2 * windowWidth))
+      : ((wh = windowHeight), (ww = windowHeight / 1.2)),
       (wr = ww / dw),
       (c = sketch.createCanvas(ww, wh)),
       sketch.colorMode(sketch.HSB, 360, 100, 100, 100),

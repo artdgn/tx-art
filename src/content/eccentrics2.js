@@ -1,3 +1,5 @@
+const maxSize = 500;
+
 export function eccentrics2Draw(sketch) {
   let tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };
 
@@ -420,7 +422,7 @@ export function eccentrics2Draw(sketch) {
   function ht() {
     (f = window.innerWidth),
       (c = window.innerHeight),
-      (d = Math.min(f, c)),
+      (d = Math.min(f, c, maxSize)),
       (A = d / r),
       (u = 21 * A),
       (o = Math.round(45 * A));

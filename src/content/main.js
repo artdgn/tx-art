@@ -3,7 +3,7 @@ import { fidenzaDraw } from './fidenza.js'
 import { eccentrics2Draw } from './eccentrics2'
 import { squiggleDraw } from './squiggle'
 
-const drawFunc = {
+const drawFuncs = {
   "fidenza": fidenzaDraw,
   "eccentrics2": eccentrics2Draw,
   "squiggle": squiggleDraw,
@@ -26,7 +26,9 @@ function main() {
     (stored) => {
       if (stored.storedSettings.enabled) {
         // docs for global vs instance drawing: https://github.com/processing/p5.js/wiki/Global-and-instance-mode
-        const sketch = new p5(drawFunc[stored.storedSettings.style], 'p5sketch');
+        const style = stored.storedSettings.style;
+        const drawFunc = drawFuncs[style];
+        const sketch = new p5(drawFunc, 'p5sketch');
       }
     });
     
