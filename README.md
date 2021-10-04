@@ -1,13 +1,26 @@
 # Tx-Art:
-*"Every transaction: a painting."*
+*"Every tx: a painting."*
 
-![](https://github.com/artdgn/artdgn.github.io/raw/master/images/fidenzas-demo.gif)
+![](https://github.com/artdgn/artdgn.github.io/raw/master/images/tx-art-4.gif)
+
+## Supported styles:
+- [Art Blocks collection **Fidenza** by Tyler Hobbs](https://artblocks.io/project/78): `fidenza` style.
+- [Art Blocks collection **Eccentrics 2: Orbits** by Radix](https://artblocks.io/project/139): `eccentrics2` style. 
+- [Art Blocks collection **EnergySculpture** by Beervangeer](https://artblocks.io/project/26): `energy`.
+- [Art Blocks collection **Chromie Squiggle** by Snowfro](https://artblocks.io/project/0): `squiggle` style. 
+- .. other styles TBA
+
+## Supported explorers:
+- Supports most block-explorers for EVM compatible chains. If enabled, it activates on any `*/tx/*` like URL, and takes the hash out of the URL itself.
 
 ## How?
 - The hash of the transaction being viewed is used as input to a generative art `p5.js` algorithm of choice, and the piece is added to the page.
 - The piece generaged is NOT an NFT, and is not part of any collection. It's just one of an infinite* amount of pieces that can be generated from the selected algorithm.
-
 > \* - not mathematically infinite, just very large in practical terms.
+
+## Privacy
+There is just one dependency at runtime - [`p5.js` package](https://p5js.org/), which is packaged with the extension (not injected from CDN).
+
 
 ## Installing the extension
 

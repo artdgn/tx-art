@@ -2,11 +2,13 @@ import p5 from 'p5';
 import { fidenzaDraw } from './fidenza.js'
 import { eccentrics2Draw } from './eccentrics2'
 import { squiggleDraw } from './squiggle'
+import { energyDraw } from './energy'
 
 const drawFuncs = {
   "fidenza": fidenzaDraw,
   "eccentrics2": eccentrics2Draw,
   "squiggle": squiggleDraw,
+  "energy": energyDraw,
 }
 
 function main() {
@@ -28,6 +30,9 @@ function main() {
         // docs for global vs instance drawing: https://github.com/processing/p5.js/wiki/Global-and-instance-mode
         const style = stored.storedSettings.style;
         const drawFunc = drawFuncs[style];
+        if (!drawFunc) {
+          throw Error(`No draw function for style ${style}`)
+        }
         const sketch = new p5(drawFunc, 'p5sketch');
       }
     });
