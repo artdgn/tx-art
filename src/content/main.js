@@ -1,10 +1,12 @@
 import p5 from 'p5';
 import { fidenzaDraw } from './fidenza.js'
 import { eccentrics2Draw } from './eccentrics2'
+import { squiggleDraw } from './squiggle'
 
 const drawFunc = {
   "fidenza": fidenzaDraw,
   "eccentrics2": eccentrics2Draw,
+  "squiggle": squiggleDraw,
 }
 
 function main() {
