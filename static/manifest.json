@@ -12,7 +12,7 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*.etherscan.io/tx/*"
+        "*://*/tx/*"
       ],
       "js": ["content-script.js"],
       "run_at": "document_idle",
