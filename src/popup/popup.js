@@ -1,10 +1,12 @@
+import { defaultSettings } from '../settings.js'
+
 function getById(id) {
   return document.getElementById(id);
 }
 
 function saveOptions(event) {
   chrome.storage.local.get(
-    { storedSettings: {} },
+    { storedSettings: defaultSettings },
     (stored) => {
       // const storedSettings = stored.storedSettings;
 
@@ -21,7 +23,7 @@ function saveOptions(event) {
 
 function loadOptions() {
   chrome.storage.local.get(
-    { storedSettings: { enabled: true, style: 'fidenza' } },
+    { storedSettings: defaultSettings },
     (stored) => {
       const storedSettings = stored.storedSettings;
         getById('selected-enabled-check').checked = storedSettings.enabled;

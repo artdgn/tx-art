@@ -1,7 +1,7 @@
 # Tx-Art:
 *"Every tx: a painting."*
 
-![](https://github.com/artdgn/artdgn.github.io/raw/master/images/tx-art-4.gif)
+![](https://github.com/artdgn/artdgn.github.io/raw/master/images/tx-art-5.gif)
 
 ## Supported styles:
 - [Art Blocks collection **Fidenza** by Tyler Hobbs](https://artblocks.io/project/78): `fidenza` style.
@@ -10,7 +10,7 @@
 - [Art Blocks collection **Chromie Squiggle** by Snowfro](https://artblocks.io/project/0): `squiggle` style. 
 - [Art Blocks collection **Skulptuur** by Piter Pasma](https://artblocks.io/project/173): `skulptuur` style. 
 - [Art Blocks collection **Gravity 12** by Jimmy Herdberg](https://artblocks.io/project/96): `gravity` style. 
-- [Art Blocks collection **Watercolor Dreams** by NumbersInMotion](https://artblocks.io/project/59): `gravity` style. 
+- [Art Blocks collection **Watercolor Dreams** by NumbersInMotion](https://artblocks.io/project/59): `watercolor` style. 
 - .. other styles TBA
 
 ## Supported explorers:

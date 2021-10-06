@@ -1170,9 +1170,9 @@ export function watercolorsDraw(sketch) {
         ? angleAmps[angleAmpIndex].a *
           sketch.PI *
           sketch.noise(
-            abs(s.x - 0.5 * ss) / (noiseScales[noiseScaleIndex].s * ss) +
+            sketch.abs(s.x - 0.5 * ss) / (noiseScales[noiseScaleIndex].s * ss) +
               offset,
-            abs(s.y - 0.5 * ss) / (noiseScales[noiseScaleIndex].s * ss) + offset
+            sketch.abs(s.y - 0.5 * ss) / (noiseScales[noiseScaleIndex].s * ss) + offset
           )
         : angleAmps[angleAmpIndex].a *
           sketch.PI *
@@ -1180,12 +1180,12 @@ export function watercolorsDraw(sketch) {
             s.x / (noiseScales[noiseScaleIndex].s * ss) + offset,
             s.y / (noiseScales[noiseScaleIndex].s * ss) + offset
           )),
-        isRotated && frameCount / flowLifespan > 0.5 && (e += 0.5 * sketch.PI);
+        isRotated && sketch.frameCount / flowLifespan > 0.5 && (e += 0.5 * sketch.PI);
       let t = 1;
       return (
         isStriped &&
           (t =
-            sketch.floor((30 * parseFloat(frameCount)) / flowLifespan) % 17 == 16
+            sketch.floor((30 * parseFloat(sketch.frameCount)) / flowLifespan) % 17 == 16
               ? 1
               : -1),
         sketch.createVector(
@@ -1266,11 +1266,11 @@ export function watercolorsDraw(sketch) {
       s && isRendering && (console.log("done!"), (isRendering = !1));
   }
   sketch.keyPressed = function(s) {
-    32 == keyCode &&
+    32 == sketch.keyCode &&
       ((ss = sketch.min(maxSize, sketch.windowWidth, sketch.windowHeight)),
       (isRendering = !0),
       setupEnvironment()),
-      68 == keyCode &&
+      68 == sketch.keyCode &&
         (isInverted
           ? sketch.save(shaderPg, tokenData.hash + ".png")
           : sketch.save(pg, tokenData.hash + ".png"));

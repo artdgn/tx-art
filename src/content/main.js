@@ -1,4 +1,5 @@
 import p5 from 'p5';
+// drawing
 import { fidenzaDraw } from './fidenza.js'
 import { eccentrics2Draw } from './eccentrics2'
 import { squiggleDraw } from './squiggle'
@@ -6,6 +7,8 @@ import { energyDraw } from './energy'
 import { gravityDraw } from './gravity'
 import { skultpuurDraw } from './skulptuur'
 import { watercolorsDraw } from './watercolors'
+// settings
+import { defaultSettings } from '../settings.js'
 
 const drawFuncs = {
   "fidenza": fidenzaDraw,
@@ -30,7 +33,7 @@ function main() {
 
   // draw the sketch
   chrome.storage.local.get(
-    { storedSettings: {} },
+    { storedSettings: defaultSettings },
     (stored) => {
       if (stored.storedSettings.enabled) {
         // docs for global vs instance drawing: https://github.com/processing/p5.js/wiki/Global-and-instance-mode
