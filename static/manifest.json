@@ -4,10 +4,11 @@
   "version": "0.1.0",
   "description": "Extension to generate a unique art piece for any transaction on Etherscan and the like.",
   "browser_action": {
+    "default_icon": "images/icon.png",
     "default_title": "Tx-Art",
     "default_popup": "popup.html"
   },
-  "icons": {},
+  "icons": {"128": "images/icon.png" },
   "permissions": ["storage"],
   "content_scripts": [
     {
