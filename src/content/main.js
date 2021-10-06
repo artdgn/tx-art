@@ -5,6 +5,7 @@ import { squiggleDraw } from './squiggle'
 import { energyDraw } from './energy'
 import { gravityDraw } from './gravity'
 import { skultpuurDraw } from './skulptuur'
+import { watercolorsDraw } from './watercolors'
 
 const drawFuncs = {
   "fidenza": fidenzaDraw,
@@ -13,6 +14,7 @@ const drawFuncs = {
   "energy": energyDraw,
   "gravity": gravityDraw,
   "skulptuur": skultpuurDraw,
+  "watercolors": watercolorsDraw,
 }
 
 function main() {

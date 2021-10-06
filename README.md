@@ -10,10 +10,17 @@
 - [Art Blocks collection **Chromie Squiggle** by Snowfro](https://artblocks.io/project/0): `squiggle` style. 
 - [Art Blocks collection **Skulptuur** by Piter Pasma](https://artblocks.io/project/173): `skulptuur` style. 
 - [Art Blocks collection **Gravity 12** by Jimmy Herdberg](https://artblocks.io/project/96): `gravity` style. 
+- [Art Blocks collection **Watercolor Dreams** by NumbersInMotion](https://artblocks.io/project/59): `gravity` style. 
 - .. other styles TBA
 
 ## Supported explorers:
 - Supports most block-explorers for EVM compatible chains. If enabled, it activates on any `*/tx/*` like URL, and takes the hash out of the URL itself.
+
+## Is this a good thing?
+- These Generative Art algorithms have in them an infinite* amount of beutiful and unique pieces.
+- Limiting our experience to just the tiny fraction of the pieces that was minted into the collections cannot be a good thing.
+- Just as "Right click -> Save As" doesn't take away anything from an NFT anymore than taking a picture of the Mona Lisa takes from the Luvre, only makes it more valuable; 
+So, generating additional pieces from the algorithms can't take away from the NFTs - only make them even more valuable.
 
 ## How?
 - The hash of the transaction being viewed is used as input to a generative art `p5.js` algorithm of choice, and the piece is added to the page.
