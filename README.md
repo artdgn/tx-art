@@ -8,6 +8,8 @@
 - [Art Blocks collection **Eccentrics 2: Orbits** by Radix](https://artblocks.io/project/139): `eccentrics2` style. 
 - [Art Blocks collection **EnergySculpture** by Beervangeer](https://artblocks.io/project/26): `energy`.
 - [Art Blocks collection **Chromie Squiggle** by Snowfro](https://artblocks.io/project/0): `squiggle` style. 
+- [Art Blocks collection **Skulptuur** by Piter Pasma](https://artblocks.io/project/173): `skulptuur` style. 
+- [Art Blocks collection **Gravity 12** by Jimmy Herdberg](https://artblocks.io/project/96): `gravity` style. 
 - .. other styles TBA
 
 ## Supported explorers:

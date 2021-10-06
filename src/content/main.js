@@ -3,12 +3,16 @@ import { fidenzaDraw } from './fidenza.js'
 import { eccentrics2Draw } from './eccentrics2'
 import { squiggleDraw } from './squiggle'
 import { energyDraw } from './energy'
+import { gravityDraw } from './gravity'
+import { skultpuurDraw } from './skulptuur'
 
 const drawFuncs = {
   "fidenza": fidenzaDraw,
   "eccentrics2": eccentrics2Draw,
   "squiggle": squiggleDraw,
   "energy": energyDraw,
+  "gravity": gravityDraw,
+  "skulptuur": skultpuurDraw,
 }
 
 function main() {
@@ -33,7 +37,8 @@ function main() {
         if (!drawFunc) {
           throw Error(`No draw function for style ${style}`)
         }
-        const sketch = new p5(drawFunc, 'p5sketch');
+        // ta-da!
+        new p5(drawFunc, 'p5sketch');
       }
     });
     
