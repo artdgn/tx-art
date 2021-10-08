@@ -5,8 +5,8 @@
   "scripts": {
     "prebuild": "rm -rf dist .cache",
     "start": "NODE_ENV=development parcel watch src/popup.html src/content-script.js --no-hmr",
-    "build": "NODE_ENV=production parcel build src/popup.html src/content-script.js && cd dist && zip -9 -rFS ../tx-art.zip * && cd -",
-    "zip-source": "git clone -l . ./temp && rm -rf ./temp/.git && cd ./temp && zip -9 -rFS ../tx-art.zip * && cd - && rm -rf ./temp/"
+    "build": "NODE_ENV=production parcel build src/popup.html src/content-script.js && cd dist && zip -9 -rFS ../tx-art.ff.zip * && cd -",
+    "zip-source": "git clone -l . ./temp && rm -rf ./temp/.git && cd ./temp && zip -9 -rFS ../tx-art.source.ff.zip * && cd - && rm -rf ./temp/"
   },
   "keywords": [],
   "author": "artdgn",
