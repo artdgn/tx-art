@@ -1,3 +1,5 @@
+<a href="https://chrome.google.com/webstore/detail/tx-art/aedfdcjgbmjjjppcjkndjledefplpfbo"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg" width="21"></a>
+
 # Tx-Art:
 *"Every tx: a painting."*
 
@@ -34,7 +36,7 @@ There is just one dependency at runtime - [`p5.js` package](https://p5js.org/), 
 
 ## Installing the extension
 
-- <a href="https://chrome.google.com/webstore/"> Not yet published for Chrome / Brave - link TBA <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg" width="21"></a>
+- <a href="https://chrome.google.com/webstore/detail/tx-art/aedfdcjgbmjjjppcjkndjledefplpfbo"> Download for Chrome / Brave  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg" width="21"></a>
 
 - <a href="https://addons.mozilla.org/en-US/firefox/addon/"> Not yet published for Firefox - link TBA <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" width="24"></a>
 
