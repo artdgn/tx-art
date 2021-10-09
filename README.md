@@ -1,28 +1,29 @@
-<a href="https://chrome.google.com/webstore/detail/tx-art/aedfdcjgbmjjjppcjkndjledefplpfbo"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg" width="21"></a>
-
-# Tx-Art:
+# Tx-Art: <a href="https://chrome.google.com/webstore/detail/tx-art/aedfdcjgbmjjjppcjkndjledefplpfbo"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg" width="21"></a> <a href="https://chrome.google.com/webstore/detail/tx-art/aedfdcjgbmjjjppcjkndjledefplpfbo"><img src="https://brave.com/wp-content/uploads/2019/03/brave-logo.png" width="21"></a> <a href="https://addons.mozilla.org/en-GB/firefox/addon/tx-art/"> <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" width="24"></a>
 *"Every tx: a painting."*
 
 ![](https://github.com/artdgn/artdgn.github.io/raw/master/images/tx-art-5.gif)
 
 ## Supported styles:
-- [Art Blocks collection **Fidenza** by Tyler Hobbs](https://artblocks.io/project/78): `fidenza` style.
-- [Art Blocks collection **Eccentrics 2: Orbits** by Radix](https://artblocks.io/project/139): `eccentrics2` style. 
-- [Art Blocks collection **EnergySculpture** by Beervangeer](https://artblocks.io/project/26): `energy`.
-- [Art Blocks collection **Chromie Squiggle** by Snowfro](https://artblocks.io/project/0): `squiggle` style. 
-- [Art Blocks collection **Skulptuur** by Piter Pasma](https://artblocks.io/project/173): `skulptuur` style. 
-- [Art Blocks collection **Gravity 12** by Jimmy Herdberg](https://artblocks.io/project/96): `gravity` style. 
-- [Art Blocks collection **Watercolor Dreams** by NumbersInMotion](https://artblocks.io/project/59): `watercolor` style. 
-- .. other styles TBA
+[ArtBlocks](https://artblocks.io) collections styles:
+- `fidenza`: [**Fidenza** by Tyler Hobbs](https://artblocks.io/project/78)
+- `eccentrics2`: [**Eccentrics 2: Orbits** by Radix](https://artblocks.io/project/139)
+- `energy`: [**EnergySculpture** by Beervangeer](https://artblocks.io/project/26)
+- `squiggle`: [**Chromie Squiggle** by Snowfro](https://artblocks.io/project/0) 
+- `skulptuur`: [**Skulptuur** by Piter Pasma](https://artblocks.io/project/173) 
+- `gravity`: [**Gravity 12** by Jimmy Herdberg](https://artblocks.io/project/96)
+- `watercolor`: [**Watercolor Dreams** by NumbersInMotion](https://artblocks.io/project/59)
+.. other styles TBA
 
 ## Supported explorers:
 - Supports most block-explorers for EVM compatible chains. If enabled, it activates on any `*/tx/*` like URL, and takes the hash out of the URL itself.
 
-## Is this a good thing?
-- These Generative Art algorithms have in them an infinite* amount of beutiful and unique pieces.
-- Limiting our experience to just the tiny fraction of the pieces that was minted into the collections cannot be a good thing.
-- Just as "Right click -> Save As" doesn't take away anything from an NFT anymore than taking a picture of the Mona Lisa takes from the Luvre, only makes it more valuable; 
-So, generating additional pieces from the algorithms can't take away from the NFTs - only make them even more valuable.
+## Installing the extension
+
+- <a href="https://chrome.google.com/webstore/detail/tx-art/aedfdcjgbmjjjppcjkndjledefplpfbo"> Download for Chrome <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg" width="21"> or Brave <img src="https://brave.com/wp-content/uploads/2019/03/brave-logo.png" width="21"> </a>
+
+- <a href="https://addons.mozilla.org/en-GB/firefox/addon/tx-art/"> Download for Firefox <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" width="24"></a>
+
+- Or build and use from source by following instruction below for "Using local extension".
 
 ## How?
 - The hash of the transaction being viewed is used as input to a generative art `p5.js` algorithm of choice, and the piece is added to the page.
@@ -33,14 +34,11 @@ So, generating additional pieces from the algorithms can't take away from the NF
 ## Privacy
 There is just one dependency at runtime - [`p5.js` package](https://p5js.org/), which is packaged with the extension (not injected from CDN).
 
-
-## Installing the extension
-
-- <a href="https://chrome.google.com/webstore/detail/tx-art/aedfdcjgbmjjjppcjkndjledefplpfbo"> Download for Chrome / Brave  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg" width="21"></a>
-
-- <a href="https://addons.mozilla.org/en-US/firefox/addon/"> Not yet published for Firefox - link TBA <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" width="24"></a>
-
-- Or build and use from source by following instruction below for "Using local extension".
+## Is this a good thing?
+- These Generative Art algorithms have in them an infinite* amount of beutiful and unique pieces.
+- Limiting our experience to just the tiny fraction of the pieces that was minted into the collections cannot be a good thing.
+- Just as "Right click -> Save As" doesn't take away anything from an NFT anymore than taking a picture of the Mona Lisa takes from the Luvre, only makes it more valuable; 
+So, generating additional pieces from the algorithms can't take away from the NFTs - only make them even more valuable.
 
 ## Using local extension
 
