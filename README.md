@@ -17,6 +17,7 @@
 - `rinascita`: [**Rinascita** Stefano Contiero](https://artblocks.io/project/121)
 - `alien-insects`: [**Alien Insects** Shvembldr](https://artblocks.io/project/137)
 - `ultrawave369`: [**UltraWave 369** Beervangeer](https://artblocks.io/project/157)
+- `meridian`: [**Meridian** Matt DesLauriers](https://artblocks.io/project/163)
 .. other styles TBA (see below how to add styles)
 
 ## Supported explorers:
@@ -104,8 +105,10 @@ So, generating additional pieces from the algorithms can't take away from the NF
     - If it's a `webgl` piece: create a canvas element like in `skulptuur.js` first.
     - Some pieces run an infinite loop with not much changes, you might want to limit those.
     - Some pieces use the `tokenId` in some way (most don't), so it needs to be "made" up for those. Check an example in `draw720minutes.js`.
+    - Check usages of `document` for how the original script interacts with the page and replace the canvas it's working with.    
   - When it finally works, check it on more sample pages: some styles have various conditional flows that may not have been tested on the previous sample page.
 4. Limiting the canvas size:
   - Find the "height" and "width" controls of the code and replace them with `maxSize` constant.
+  - Look for JS code that is setting various style attributes (e.g. setting `display` etc) and disable it.
 
 </details>
