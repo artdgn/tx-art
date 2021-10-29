@@ -19,6 +19,7 @@
 - `ultrawave369`: [**UltraWave 369** Beervangeer](https://artblocks.io/project/157)
 - `meridian`: [**Meridian** Matt DesLauriers](https://artblocks.io/project/163)
 - `blanschke-ballet`: [**Blaschke Ballet** NumbersInMotion](https://artblocks.io/project/167)
+- `flowers`: [**Flowers** RVig](https://artblocks.io/project/116)
 .. other styles TBA (see below how to add styles)
 
 ## Supported explorers:
@@ -107,6 +108,7 @@ So, generating additional pieces from the algorithms can't take away from the NF
     - Some pieces run an infinite loop with not much changes, you might want to limit those.
     - Some pieces use the `tokenId` in some way (most don't), so it needs to be "made" up for those. Check an example in `draw720minutes.js`.
     - Check usages of `document` for how the original script interacts with the page and replace the canvas it's working with.    
+    - Some variables that need to be defined (e.g. script may be just assigning `a = 1`, but a `let a;` needs to be added)
   - When it finally works, check it on more sample pages: some styles have various conditional flows that may not have been tested on the previous sample page.
 4. Limiting the canvas size:
   - Find the "height" and "width" controls of the code and replace them with `maxSize` constant.
