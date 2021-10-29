@@ -6,6 +6,7 @@ import { energyDraw } from './energy'
 import { gravityDraw } from './gravity'
 import { skultpuurDraw } from './skulptuur'
 import { watercolorsDraw } from './watercolors'
+import { draw720minutes } from './draw720minutes'
 
 export const drawFuncs = {
     "fidenza": fidenzaDraw,
@@ -15,4 +16,5 @@ export const drawFuncs = {
     "gravity": gravityDraw,
     "skulptuur": skultpuurDraw,
     "watercolors": watercolorsDraw,
+    "720minutes": draw720minutes,
 }

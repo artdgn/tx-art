@@ -12,7 +12,8 @@
 - `skulptuur`: [**Skulptuur** by Piter Pasma](https://artblocks.io/project/173) 
 - `gravity`: [**Gravity 12** by Jimmy Herdberg](https://artblocks.io/project/96)
 - `watercolor`: [**Watercolor Dreams** by NumbersInMotion](https://artblocks.io/project/59)
-.. other styles TBA
+- (doesn't work well) `720minutes`: [**720 Minutes** Alexis André](https://www.artblocks.io/project/27)
+.. other styles TBA (see below how to add styles)
 
 ## Supported explorers:
 - Supports most block-explorers for EVM compatible chains. If enabled, it activates on any `*/tx/*` like URL, and takes the hash out of the URL itself.
@@ -72,4 +73,35 @@ So, generating additional pieces from the algorithms can't take away from the NF
     Navigate to `/extension/` folder in this project -> choose `tx-art.zip`.
     - To update (on code changes): repeat previous two steps.
 - Docs: [Firefox docs](https://extensionworkshop.com/documentation/develop/testing-persistent-and-restart-features/)
+</details>
+
+
+# Adding new styles
+
+<details><summary>Instructions</summary>
+
+1. Choose a new style and add it in:
+  - `README.md` list of styles.
+  - `popup.html` select box of styles names and identifiers.
+  - Copy one of the existing style files from `/styles` into a new `styles/YourNewStyle.js` file with a new function name.
+  - Import the new file in `styles/index.js` and add the new function into the style name mapping in the `drawFuncs` object.
+2. Replace the previous JS code in the new style function with the correct code for the style:
+  - Leave the `let tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };` line as is (or adjust it as needed if the used format is different).
+  - Get the "live" code from a sample piece's ArtBlocks "live" page and add it after that line. E.g. go to https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/27000294 -> view source.
+  - Format that code using `prettier` ("format selection") so that it can be read and edited.
+3. **The hard part**: making the code work:  
+  - The editing process is iterative. Run `npm start` to build the extension on code changes. And do this until it works:
+    - Go to the browser extensions page (see above on how to load extensions locally) and reload the extension.
+    - Reload a sample page and watch the errors in the browser dev console.
+    - Fix the code and check more errors.
+  - Common patterns of fixing the code:
+    - A lot of the live code is written to work in "global" mode, whereas in the extension it needs to be edited to work in "instance" mode. https://github.com/processing/p5.js/wiki/Global-and-instance-mode is the guide, and `p5` API docs is the tool to guide the editing process.  
+    - If it's a `p5` piece: global `p5` functions and variable like `createCanvas()` or `HSB` need to be replaced with instance equivalents, e.g. `sketch.createCanvas()` if `sketch` is the instance name in that scope. Look for functions that aren't defined in the scope - add `sketch.`.
+    - If it's a `webgl` piece: create a canvas element like in `skulptuur.js` first.
+    - Some pieces run an infinite loop with not much changes, you might want to limit those.
+    - Some pieces use the `tokenId` in some way (most don't), so it needs to be "made" up for those. Check an example in `draw720minutes.js`.
+  - When it finally works, check it on more sample pages: some styles have various conditional flows that may not have been tested on the previous sample page.
+4. Limiting the canvas size:
+  - Find the "height" and "width" controls of the code and replace them with `maxSize` constant.
+
 </details>
