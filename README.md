@@ -11,8 +11,8 @@
 - `squiggle`: [**Chromie Squiggle** by Snowfro](https://artblocks.io/project/0) 
 - `skulptuur`: [**Skulptuur** by Piter Pasma](https://artblocks.io/project/173) 
 - `gravity`: [**Gravity 12** by Jimmy Herdberg](https://artblocks.io/project/96)
-- `watercolor`: [**Watercolor Dreams** by NumbersInMotion](https://artblocks.io/project/59)
-- (doesn't work well) `720minutes`: [**720 Minutes** Alexis André](https://www.artblocks.io/project/27)
+- `watercolor`: [**Watercolor Dreams** by NumbersInMotion](https://artblocks.io/project/15)
+- `utopia`: [**Utopia** ge1doot](https://artblocks.io/project/59)
 .. other styles TBA (see below how to add styles)
 
 ## Supported explorers:
