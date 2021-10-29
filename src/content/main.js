@@ -1,24 +1,8 @@
 import p5 from 'p5';
 // drawing
-import { fidenzaDraw } from './fidenza.js'
-import { eccentrics2Draw } from './eccentrics2'
-import { squiggleDraw } from './squiggle'
-import { energyDraw } from './energy'
-import { gravityDraw } from './gravity'
-import { skultpuurDraw } from './skulptuur'
-import { watercolorsDraw } from './watercolors'
+import { drawFuncs } from './styles'
 // settings
 import { defaultSettings } from '../settings.js'
-
-const drawFuncs = {
-  "fidenza": fidenzaDraw,
-  "eccentrics2": eccentrics2Draw,
-  "squiggle": squiggleDraw,
-  "energy": energyDraw,
-  "gravity": gravityDraw,
-  "skulptuur": skultpuurDraw,
-  "watercolors": watercolorsDraw,
-}
 
 function main() {
   // create the div for the sketch
