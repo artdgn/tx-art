@@ -18,6 +18,7 @@
 - `alien-insects`: [**Alien Insects** Shvembldr](https://artblocks.io/project/137)
 - `ultrawave369`: [**UltraWave 369** Beervangeer](https://artblocks.io/project/157)
 - `meridian`: [**Meridian** Matt DesLauriers](https://artblocks.io/project/163)
+- `blanschke-ballet`: [**Blaschke Ballet** NumbersInMotion](https://artblocks.io/project/167)
 .. other styles TBA (see below how to add styles)
 
 ## Supported explorers:

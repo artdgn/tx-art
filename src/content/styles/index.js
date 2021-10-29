@@ -13,6 +13,7 @@ import { drawRinascita } from './rinascita'
 import { drawAlienInsects } from './alienInsects'
 import { drawUltrawave369 } from './ultrawave369'
 import { drawMeridian } from './meridian'
+import { drawBlanschke } from './blanschke'
 // import { drawObicera } from './obicera'
 
 export const drawFuncs = {
@@ -30,5 +31,6 @@ export const drawFuncs = {
     "alien-insects": drawAlienInsects,
     "ultrawave369": drawUltrawave369,
     "meridian": drawMeridian,
+    "blanschke-ballet": drawBlanschke,
     // "obicera": drawObicera,
 }
