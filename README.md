@@ -13,6 +13,7 @@
 - `gravity`: [**Gravity 12** by Jimmy Herdberg](https://artblocks.io/project/96)
 - `watercolor`: [**Watercolor Dreams** by NumbersInMotion](https://artblocks.io/project/15)
 - `utopia`: [**Utopia** ge1doot](https://artblocks.io/project/59)
+- `void`: [**Void** Alexis André](https://artblocks.io/project/42)
 .. other styles TBA (see below how to add styles)
 
 ## Supported explorers:

@@ -6,8 +6,9 @@ import { energyDraw } from './energy'
 import { gravityDraw } from './gravity'
 import { skultpuurDraw } from './skulptuur'
 import { watercolorsDraw } from './watercolors'
-import { draw720minutes } from './draw720minutes'
+// import { draw720minutes } from './draw720minutes'
 import { drawUtopia } from './utopia'
+import { drawVoid } from './void'
 
 export const drawFuncs = {
     "fidenza": fidenzaDraw,
@@ -19,4 +20,5 @@ export const drawFuncs = {
     "watercolors": watercolorsDraw,
     // "720minutes": draw720minutes,
     "utopia": drawUtopia,
+    "void": drawVoid,
 }
