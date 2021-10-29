@@ -15,6 +15,7 @@ import { drawUltrawave369 } from './ultrawave369'
 import { drawMeridian } from './meridian'
 import { drawBlanschke } from './blanschke'
 import { drawFlowers } from './flowers'
+// import { drawRapture } from './rapture'
 // import { drawObicera } from './obicera'
 
 export const drawFuncs = {
@@ -34,5 +35,6 @@ export const drawFuncs = {
     "meridian": drawMeridian,
     "blanschke-ballet": drawBlanschke,
     "flowers": drawFlowers,
+    // "rapture": drawRapture,
     // "obicera": drawObicera,
 }
