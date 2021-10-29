@@ -10,6 +10,7 @@ import { watercolorsDraw } from './watercolors'
 import { drawUtopia } from './utopia'
 import { drawVoid } from './void'
 import { drawRinascita } from './rinascita'
+import { drawAlienInsects } from './alienInsects'
 // import { drawObicera } from './obicera'
 
 export const drawFuncs = {
@@ -24,5 +25,6 @@ export const drawFuncs = {
     "utopia": drawUtopia,
     "void": drawVoid,
     "rinascita": drawRinascita,
+    "alien-insects": drawAlienInsects,
     // "obicera": drawObicera,
 }

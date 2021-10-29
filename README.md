@@ -15,6 +15,7 @@
 - `utopia`: [**Utopia** ge1doot](https://artblocks.io/project/59)
 - `void`: [**Void** Alexis André](https://artblocks.io/project/42)
 - `rinascita`: [**Rinascita** Stefano Contiero](https://artblocks.io/project/121)
+- `alien-insects`: [**Alien Insects** Shvembldr](https://artblocks.io/project/137)
 .. other styles TBA (see below how to add styles)
 
 ## Supported explorers:
