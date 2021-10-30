@@ -81,3 +81,14 @@ select {
   background-color: #f2f2ff;
   border-radius: 0.4rem;
 }
+option:checked {
+  color: white;
+  background-color: green;
+}
+#link-to-collection{
+  margin-top: 1rem;
+  color: rgb(109, 109, 109);
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-around;
+}

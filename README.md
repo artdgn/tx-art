@@ -11,8 +11,8 @@
 - `squiggle`: [**Chromie Squiggle** by Snowfro](https://artblocks.io/project/0) 
 - `skulptuur`: [**Skulptuur** by Piter Pasma](https://artblocks.io/project/173) 
 - `gravity`: [**Gravity 12** by Jimmy Herdberg](https://artblocks.io/project/96)
-- `watercolor`: [**Watercolor Dreams** by NumbersInMotion](https://artblocks.io/project/15)
-- `utopia`: [**Utopia** ge1doot](https://artblocks.io/project/59)
+- `watercolors`: [**Watercolor Dreams** by NumbersInMotion](https://artblocks.io/project/59)
+- `utopia`: [**Utopia** ge1doot](https://artblocks.io/project/15)
 - `void`: [**Void** Alexis André](https://artblocks.io/project/42)
 - `rinascita`: [**Rinascita** Stefano Contiero](https://artblocks.io/project/121)
 - `alien-insects`: [**Alien Insects** Shvembldr](https://artblocks.io/project/137)
@@ -34,7 +34,7 @@
 - Or build and use from source by following instruction below for "Using local extension".
 
 ## How?
-- The hash of the transaction being viewed is used as input to a generative art `p5.js` algorithm of choice, and the piece is added to the page.
+- The hash of the transaction being viewed is used as input to a generative art algorithm of choice, and the piece is added to the page.
 - The piece generaged is NOT an NFT, and is not part of any collection. It's just one of an infinite* amount of pieces that can be generated from the selected algorithm.
 - This also means that this works for transactions that don't exist, or are still pending. Enjoy some fine art while you wait.
 > \* - not mathematically infinite, just very large in practical terms.
