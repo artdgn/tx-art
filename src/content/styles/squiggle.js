@@ -1,9 +1,15 @@
-const maxSize = 300;
+import p5 from 'p5';
 
-export function squiggleDraw(sketch) {
-  // grab hash
-  let tokenData = { "hashes": [(window.location.href.match(/0x.{64}/) || [''])[0]] }
+const maxSize = 400;
 
+// grab hash
+const tokenData = { "hashes": [(window.location.href.match(/0x.{64}/) || [''])[0]] }
+
+export function squiggleDraw(sketchId) {  
+  new p5(drawSketch, sketchId);
+}
+
+function drawSketch(sketch) {
   let numHashes = tokenData.hashes.length;
   let hashPairs = [];
   for (let i = 0; i < numHashes; i++) {

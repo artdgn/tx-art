@@ -2,9 +2,13 @@ import p5 from 'p5';
 
 const maxSize = 500;
 
-export function energyDraw(sketch) {
-  let tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };
+const tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };
 
+export function energyDraw(sketchId) {
+  new p5(drawSketch, sketchId);
+}
+
+function drawSketch(sketch) {
   let hashPairs = [];
   for (let j = 0; j < 32; j++) {
     hashPairs.push(tokenData.hash.slice(2 + (j * 2), 4 + (j * 2)));

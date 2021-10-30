@@ -1,6 +1,6 @@
 const maxSize = 400;
 
-export function draw720minutes(sketch) {
+export function draw720minutes(sketchElementId) {
   let hash = (window.location.href.match(/0x.{40}/) || [""])[0]; // this piece uses only 20 bytes of the hash
   let tokenData = { 
     hash: hash, 
@@ -9,7 +9,7 @@ export function draw720minutes(sketch) {
   console.log(tokenData)
 
   // create a canvas child
-  const sketchDiv = document.getElementById("p5sketch");
+  const sketchDiv = document.getElementById(sketchElementId);
   const canvas = document.createElement('canvas', { "width": maxSize, "height": maxSize });
   sketchDiv.appendChild(canvas);
 

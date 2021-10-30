@@ -1,7 +1,14 @@
+import p5 from 'p5';
+
 const maxSize = 500;
 
-export function watercolorsDraw(sketch) {
-  let tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };
+const tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };
+
+export function watercolorsDraw(sketchId) {  
+  new p5(drawSketch, sketchId);
+}
+
+function drawSketch(sketch) {
 
   function pwa(s) {
     let e = sketch.random(1),

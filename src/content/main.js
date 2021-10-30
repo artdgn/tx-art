@@ -1,4 +1,3 @@
-import p5 from 'p5';
 // drawing
 import { drawFuncs } from './styles'
 // settings
@@ -27,7 +26,7 @@ function main() {
           throw Error(`No draw function for style ${style}`)
         }
         // ta-da!
-        new p5(drawFunc, 'p5sketch');
+        drawFunc(sketchDiv.id);
       }
     });
     

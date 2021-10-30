@@ -1,10 +1,10 @@
 const maxSize = 500;
 
-export function skultpuurDraw(sketch) {
+export function skultpuurDraw(sketchId) {
   let tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };
 
   // create a canvas child
-  const sketchDiv = document.getElementById("p5sketch");
+  const sketchDiv = document.getElementById(sketchId);
   const canvas = document.createElement('canvas');
   sketchDiv.appendChild(canvas);
 

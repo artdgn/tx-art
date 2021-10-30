@@ -1,8 +1,14 @@
+import p5 from 'p5';
+
 const maxSize = 500;
 
-export function drawFlowers(sketch) {
-  let tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };
+const tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };
 
+export function drawFlowers(sketchId) {  
+  new p5(drawSketch, sketchId);
+}
+
+function drawSketch(sketch) {
   let a, b, c, e, f, h, i, j, k, l, m, n, q, r, s, u, v, x, y, z;
   let A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z;
   let min, max;

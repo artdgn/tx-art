@@ -1,12 +1,12 @@
 const maxSize = 700;
 
-export function drawMeridian(sketch) {
+export function drawMeridian(sketchElementId) {
   let tokenData = {
     hash: (window.location.href.match(/0x.{64}/) || [""])[0],
   };
 
   // create a canvas child
-  const sketchDiv = document.getElementById("p5sketch");
+  const sketchDiv = document.getElementById(sketchElementId);
   const canvas = document.createElement('canvas', { "width": maxSize, "height": maxSize });
   sketchDiv.appendChild(canvas);
 

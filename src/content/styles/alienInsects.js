@@ -1,7 +1,14 @@
+import p5 from 'p5';
+
 const maxSize = 500;
 
-export function drawAlienInsects(sketch) {
-  let tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };
+const tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };
+
+export function drawAlienInsects(sketchId) {  
+  new p5(drawSketch, sketchId);
+}
+
+function drawSketch(sketch) {
 
   const e = (e) => parseInt(e.hash.slice(0, 16), 16);
   let f,

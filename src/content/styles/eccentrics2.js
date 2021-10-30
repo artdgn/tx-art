@@ -1,8 +1,14 @@
+import p5 from 'p5';
+
 const maxSize = 500;
 
-export function eccentrics2Draw(sketch) {
-  let tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };
+const tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };
 
+export function eccentrics2Draw(sketchId) {  
+  new p5(drawSketch, sketchId);
+}
+
+function drawSketch(sketch) {
   // reformatted with prettier
   let t,
     s = [
