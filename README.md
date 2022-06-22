@@ -27,7 +27,7 @@
 
 ## Installing the extension
 
-- <a href="https://chrome.google.com/webstore/detail/tx-art/aedfdcjgbmjjjppcjkndjledefplpfbo"> Download for Chrome <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg" width="21"> or Brave <img src="https://brave.com/wp-content/uploads/2019/03/brave-logo.png" width="21"> </a>
+- <a href="https://chrome.google.com/webstore/detail/tx-art/aedfdcjgbmjjjppcjkndjledefplpfbo"> Download for Chrome <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg" width="21"> or Brave <img src="https://brave.com/static-assets/images/brave-logo.svg" width="70"> </a>
 
 - <a href="https://addons.mozilla.org/en-GB/firefox/addon/tx-art/"> Download for Firefox <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" width="24"></a>
 
