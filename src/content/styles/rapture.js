@@ -1,9 +1,13 @@
 import p5 from "p5";
 
-const maxSize = 500;
+import { urlParamTxHash } from '../util.js'
 
-export function drawRapture() {
-  let tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };
+let maxSize = 500;
+
+const tokenData = { hash: urlParamTxHash() };
+
+export function drawRapture({ sketchId, sizeOverride }) {  
+  maxSize = sizeOverride || maxSize;
 
   let g, h, cw, ch;
   let ci, sh4, sq1, sq2, sq3, sq4, sq5, sq2a, sq3a, ci1, ci2, ci3, ci4, ci5, ci2a, ci3a;

@@ -1,10 +1,13 @@
 import p5 from 'p5';
 
-const maxSize = 500;
+import { urlParamTxHash } from '../util.js'
 
-const tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };
+let maxSize = 500;
 
-export function energyDraw(sketchId) {
+const tokenData = { hash: urlParamTxHash() };
+
+export function energyDraw({ sketchId, sizeOverride }) {  
+  maxSize = sizeOverride || maxSize;
   new p5(drawSketch, sketchId);
 }
 

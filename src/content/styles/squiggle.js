@@ -1,11 +1,13 @@
 import p5 from 'p5';
 
-const maxSize = 400;
+import { urlParamTxHash } from '../util.js'
 
-// grab hash
-const tokenData = { "hashes": [(window.location.href.match(/0x.{64}/) || [''])[0]] }
+let maxSize = 400;
 
-export function squiggleDraw(sketchId) {  
+const tokenData = { hashes: [urlParamTxHash()] };
+
+export function squiggleDraw({ sketchId, sizeOverride }) {  
+  maxSize = sizeOverride || maxSize;
   new p5(drawSketch, sketchId);
 }
 

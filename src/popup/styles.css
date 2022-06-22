@@ -74,10 +74,21 @@ body {
 input[type='checkbox'] {
   transform: scale(1.2);
 }
+input[type='text'] {
+  width: 45%;
+  font-size: 1.25rem;
+  text-align: center;
+}
+label {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  text-align: left;
+}
 select {
   width: 65%;
   font-size: 1.25rem;
-  text-align: center;
+  text-align: left;
   background-color: #f2f2ff;
   border-radius: 0.4rem;
 }

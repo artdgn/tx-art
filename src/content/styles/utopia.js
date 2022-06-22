@@ -1,12 +1,13 @@
-const maxSize = 400;
+import { urlParamTxHash } from '../util.js'
 
-export function drawUtopia(sketchElementId) {
-  let tokenData = { 
-    hash: (window.location.href.match(/0x.{64}/) || [""])[0], 
-  };
+let maxSize = 400;
 
+const tokenData = { hash: urlParamTxHash() };
+
+export function drawUtopia({ sketchId, sizeOverride }) {  
+  maxSize = sizeOverride || maxSize;
   // create a canvas child
-  const sketchDiv = document.getElementById(sketchElementId);
+  const sketchDiv = document.getElementById(sketchId);
   const canvas = document.createElement('canvas', { "width": maxSize, "height": maxSize });
   sketchDiv.appendChild(canvas);
 

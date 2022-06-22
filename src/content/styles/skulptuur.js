@@ -1,7 +1,11 @@
-const maxSize = 500;
+import { urlParamTxHash } from '../util.js'
 
-export function skultpuurDraw(sketchId) {
-  let tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };
+let maxSize = 500;
+
+const tokenData = { hash: urlParamTxHash() };
+
+export function skultpuurDraw({ sketchId, sizeOverride }) {  
+  maxSize = sizeOverride || maxSize;
 
   // create a canvas child
   const sketchDiv = document.getElementById(sketchId);

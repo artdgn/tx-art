@@ -1,5 +1,6 @@
 export const defaultSettings = {
     enabled: true, 
-    style: 'fidenza'
+    style: 'fidenza',
+    sizeOverride: ''
   }
   

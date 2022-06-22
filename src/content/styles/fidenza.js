@@ -1,10 +1,13 @@
 import p5 from 'p5';
 
-const maxSize = 600;
+import { urlParamTxHash } from '../util.js'
 
-const tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };
+let maxSize = 600;
 
-export function fidenzaDraw(sketchId) {  
+const tokenData = { hash: urlParamTxHash() };
+
+export function fidenzaDraw({ sketchId, sizeOverride }) {  
+  maxSize = sizeOverride || maxSize;
   new p5(drawSketch, sketchId);
 }
 

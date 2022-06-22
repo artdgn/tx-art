@@ -14,6 +14,7 @@ function saveOptions(event) {
       const newSettings = {
         enabled: getById('selected-enabled-check').checked,
         style: getById('selected-style').value,
+        sizeOverride: getById('selected-size-override').value.trim(),
       };
  
       chrome.storage.local.set({ storedSettings: newSettings });
@@ -30,6 +31,7 @@ function loadOptions() {
       const storedSettings = stored.storedSettings;
         getById('selected-enabled-check').checked = storedSettings.enabled;
         getById('selected-style').value = storedSettings.style;
+        getById('selected-size-override').value = storedSettings.sizeOverride;
 
       // make sure collection link matches
       setCollectionLink();

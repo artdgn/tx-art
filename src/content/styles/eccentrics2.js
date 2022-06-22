@@ -1,10 +1,13 @@
 import p5 from 'p5';
 
-const maxSize = 500;
+import { urlParamTxHash } from '../util.js'
 
-const tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };
+let maxSize = 500;
 
-export function eccentrics2Draw(sketchId) {  
+const tokenData = { hash: urlParamTxHash() };
+
+export function eccentrics2Draw({ sketchId, sizeOverride }) {  
+  maxSize = sizeOverride || maxSize;
   new p5(drawSketch, sketchId);
 }
 

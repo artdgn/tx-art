@@ -1,7 +1,10 @@
-const maxSize = 400;
+import { urlParamTxHash } from '../util.js'
 
-export function draw720minutes(sketchElementId) {
-  let hash = (window.location.href.match(/0x.{40}/) || [""])[0]; // this piece uses only 20 bytes of the hash
+let maxSize = 400;
+
+export function draw720minutes({ sketchId, sizeOverride }) {  
+  maxSize = sizeOverride || maxSize;
+  let hash = urlParamTxHash().slice(0, 40); // this piece uses only 20 bytes of the hash
   let tokenData = { 
     hash: hash, 
     tokenId: parseInt(hash.substr(-8), 16) // this piece is using the tokenId last 4 digits
@@ -9,7 +12,7 @@ export function draw720minutes(sketchElementId) {
   console.log(tokenData)
 
   // create a canvas child
-  const sketchDiv = document.getElementById(sketchElementId);
+  const sketchDiv = document.getElementById(sketchId);
   const canvas = document.createElement('canvas', { "width": maxSize, "height": maxSize });
   sketchDiv.appendChild(canvas);
 
