@@ -20,6 +20,7 @@
 - `meridian`: [**Meridian** Matt DesLauriers](https://artblocks.io/project/163)
 - `blanschke-ballet`: [**Blaschke Ballet** NumbersInMotion](https://artblocks.io/project/167)
 - `flowers`: [**Flowers** RVig](https://artblocks.io/project/116)
+- `autology`: [**Autology** Steganon](https://artblocks.io/project/209)
 .. other styles TBA (see below how to add styles)
 
 ## Supported explorers:
@@ -90,10 +91,11 @@ So, generating additional pieces from the algorithms can't take away from the NF
 1. Choose a new style and add it in:
   - `README.md` list of styles.
   - `popup.html` select box of styles names and identifiers.
+  - `popup.js`: add arblocks project number in `projectId` mapping (so that project link will work).
   - Copy one of the existing style files from `/styles` into a new `styles/YourNewStyle.js` file with a new function name.
   - Import the new file in `styles/index.js` and add the new function into the style name mapping in the `drawFuncs` object.
 2. Replace the previous JS code in the new style function with the correct code for the style:
-  - Leave the `let tokenData = { hash: (window.location.href.match(/0x.{64}/) || [""])[0] };` line as is (or adjust it as needed if the used format is different).
+  - Leave the `const tokenData = { hash: ...` line as is (or adjust it as needed if the used format is different).
   - Get the "live" code from a sample piece's ArtBlocks "live" page and add it after that line. E.g. go to https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/27000294 -> view source.
   - Format that code using `prettier` ("format selection") so that it can be read and edited.
 3. **The hard part**: making the code work:  

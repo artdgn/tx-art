@@ -1,6 +1,6 @@
 {
   "name": "tx-art",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Extension that generates a pretty and unique art piece for the transaction info page on Etherscan.",
   "scripts": {
     "prebuild": "rm -rf dist .cache",

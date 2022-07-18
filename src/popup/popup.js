@@ -57,7 +57,8 @@ function setCollectionLink() {
     'ultrawave369': 157,
     'meridian': 163,
     'blanschke-ballet': 167,
-    'flowers': 116
+    'flowers': 116,
+    'autology': 209
     }[selected];
   link.href = `https://artblocks.io/project/${projectId}`
   console.log(link.href)
@@ -73,4 +74,3 @@ function main() {
 }
 
 main();
-

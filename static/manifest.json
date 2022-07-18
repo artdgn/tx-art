@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Tx-Art",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Extension to generate a unique art piece for any transaction on Etherscan and the like.",
   "action": {
     "default_icon": "images/icon.png",

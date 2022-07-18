@@ -14,6 +14,7 @@ import { drawUltrawave369 } from './ultrawave369'
 import { drawMeridian } from './meridian'
 import { drawBlanschke } from './blanschke'
 import { drawFlowers } from './flowers'
+import { autologyDraw } from './autology'
 // import { draw720minutes } from './draw720minutes'
 // import { drawRapture } from './rapture'
 // import { drawObicera } from './obicera'
@@ -38,6 +39,7 @@ export const drawFuncs = {
     "utopia": drawUtopia,
     "void": drawVoid,
     "meridian": drawMeridian,
+    "autology": autologyDraw,
 
     // don't work
     // "720minutes": draw720minutes,
